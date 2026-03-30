@@ -19,7 +19,7 @@ npm install
 # Compiles TypeScript to dist/
 npm run build
 
-# Runs server using ts-node-dev
+# Runs server using tsx
 npm run dev
 
 # Runs compiled production build
