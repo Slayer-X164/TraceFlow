@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>tetsing traceFlow sdk</title>
 </head>
+
 <body>
   <h1>testing sdk</h1>
+  <!-- <img src="non.png" alt="thsi is a img"> -->
   <script src="sdk.js"></script>
-  <script>DevWatch.traceFlowInit()</script>
+  <script>
+    TraceFlow.init()
+    setTimeout(() => {
+      nonExistingFunc()
+    }, 3000)
+  </script>
 </body>
+
 </html>
