@@ -8,14 +8,29 @@
 </head>
 
 <body>
-  <h1>testing sdk</h1>
+  <h1>testing sdkdsdds</h1>
   <!-- <img src="non.png" alt="thsi is a img"> -->
   <script src="sdk.js"></script>
   <script>
     TraceFlow.init()
-    setTimeout(() => {
-      nonExistingFunc()
-    }, 3000)
+
+    for (let i = 0; i < 50; i++) {
+      setTimeout(() => {
+        function nonExisitingFunc(){
+          throw new Error(`some error`);
+        }
+        nonExisitingFunc()
+      }, 100)
+    }
+
+    // for (let i = 0; i < 50; i++) {
+    //   async function testAsyncError() {
+    //     throw new Error("Async boom")
+    //   }
+    //   testAsyncError()
+    // }
+
+
   </script>
 </body>
 

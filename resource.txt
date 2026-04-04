@@ -1,8 +1,9 @@
 about sdk - https://sdk-design.js.org/#design-philosophy
 how to get errors - https://developer.mozilla.org/en-US/docs/Web/API/Window/error_event
+how to handle async errors - https://developer.mozilla.org/en-US/docs/Web/API/Window/unhandledrejection_event
 
 task to do:
-async erro handling
+deduplication
+batching
 validation
 rate limiting
-abuse prevention
