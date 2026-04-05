@@ -17,7 +17,7 @@
     for (let i = 0; i < 50; i++) {
       setTimeout(() => {
         function nonExisitingFunc(){
-          throw new Error(`some error`);
+          throw new Error(`some error `);
         }
         nonExisitingFunc()
       }, 100)

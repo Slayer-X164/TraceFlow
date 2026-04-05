@@ -3,7 +3,6 @@ how to get errors - https://developer.mozilla.org/en-US/docs/Web/API/Window/erro
 how to handle async errors - https://developer.mozilla.org/en-US/docs/Web/API/Window/unhandledrejection_event
 
 task to do:
-deduplication
-batching
+websockets
 validation
 rate limiting

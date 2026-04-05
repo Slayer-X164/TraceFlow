@@ -2,4 +2,5 @@
 2 - create a sdk that will run on user's website and send error data to /log ✅
 3 - create a function inside sdk which sends js errors or other normal errors ✅
 4 - create a function inside sdk which sends ASYNC promise errors ✅
-5 - implement inmemory Deduplication for events 🛠️
+5 - implement inmemory Deduplication for events ✅
+6 - implement socket.io 🛠️
