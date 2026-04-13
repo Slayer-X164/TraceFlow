@@ -1,4 +1,4 @@
-import type { eventDataType } from '../types/eventTypes'
+import type { eventDataType } from '../../types/eventTypes'
 
 const EventCard = (events:eventDataType[]) => {
   return (
