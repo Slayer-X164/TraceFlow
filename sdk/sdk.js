@@ -44,7 +44,7 @@
           timestamp: new Date().toISOString()
         }
 
-        if(!shouldSendEvent(eventLog)) return
+        if (!shouldSendEvent(eventLog)) return
 
         fetch("http://localhost:3000/api/log", {
           method: "POST",
@@ -70,20 +70,31 @@
         } else {
           message = JSON.stringify(reason)
         }
+        let file = null
+        let line = null
+        let col = null
 
+        if (stack) {
+          const match = stack.match(/\((.*):(\d+):(\d+)\)/)
+          if (match) {
+            file = match[1]
+            line = Number(match[2])
+            col = Number(match[3])
+          }
+        }
         let eventLog = {
           eventType: "promise_error",
           message: message,
-          filename: null,
-          lineno: null,
-          colno: null,
+          filename: file || null,
+          lineno: line || null,
+          colno: col || null,
           error: stack,
           userAgent: window.navigator.userAgent,
           url: window.location.href,
           timestamp: new Date().toISOString()
         }
 
-        if(!shouldSendEvent(eventLog)) return
+        if (!shouldSendEvent(eventLog)) return
 
         fetch("http://localhost:3000/api/log", {
           method: "POST",
