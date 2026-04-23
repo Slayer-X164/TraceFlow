@@ -8,3 +8,9 @@ export interface eventDataType {
   timestamp: string
   url: string
 }
+export interface groupEvent {
+  [fingerprint: string]: {
+    event: eventDataType,
+    count: number
+  }
+}
